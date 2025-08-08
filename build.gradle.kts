@@ -30,7 +30,7 @@ dependencies {
     implementation("io.opentelemetry:opentelemetry-api:1.32.0")
     implementation("io.opentelemetry:opentelemetry-sdk:1.32.0")
     implementation("io.opentelemetry:opentelemetry-exporter-otlp:1.32.0")
-    implementation("io.opentelemetry:opentelemetry-semconv:1.32.0-alpha")
+    implementation("io.opentelemetry.semconv:opentelemetry-semconv:1.21.0-alpha")
     implementation("io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:1.32.0")
     implementation("io.opentelemetry.instrumentation:opentelemetry-ktor-2.0:2.0.0-alpha")
     
