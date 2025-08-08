@@ -5,7 +5,7 @@ COPY . .
 
 RUN gradle build --no-daemon
 
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre-jammy
 
 WORKDIR /app
 
