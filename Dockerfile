@@ -1,8 +1,18 @@
-FROM gradle:8.4-jdk17 AS build
+FROM openjdk:17-jdk AS build
 
 WORKDIR /app
+
+# Install Gradle
+RUN apt-get update && apt-get install -y wget unzip
+RUN wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
+RUN unzip gradle-8.4-bin.zip
+RUN mv gradle-8.4 /opt/gradle
+ENV PATH="/opt/gradle/bin:${PATH}"
+
+# Copy source code
 COPY . .
 
+# Build the application
 RUN gradle build --no-daemon
 
 FROM eclipse-temurin:17-jre-jammy
