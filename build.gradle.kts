@@ -25,6 +25,8 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json")
     implementation("io.ktor:ktor-server-call-logging")
     implementation("io.ktor:ktor-server-metrics-micrometer")
+    implementation("io.ktor:ktor-server-call-logging-jvm")
+    implementation("io.ktor:ktor-server-metrics-micrometer-jvm")
     
     // OpenTelemetry dependencies
     implementation("io.opentelemetry:opentelemetry-api:1.32.0")
@@ -40,6 +42,9 @@ dependencies {
     // Testing
     testImplementation("io.ktor:ktor-server-tests")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.9.20")
+    
+    // Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 }
 
 tasks.withType<KotlinCompile> {

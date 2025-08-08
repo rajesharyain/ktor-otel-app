@@ -49,7 +49,4 @@ fun initializeOpenTelemetry() {
         .setTracerProvider(sdkTracerProvider)
         .setPropagators(ContextPropagators.create(W3CTraceContextPropagator.getInstance()))
         .buildAndRegisterGlobal()
-
-    // Set as global instance
-    OpenTelemetry.set(openTelemetry)
 } 
